@@ -1,0 +1,107 @@
+1) class with2methods:
+    def getString(self):
+        self.s = input()
+    def printString(self):
+        print(self.s.upper())
+
+UserInput = with2meth()
+UserInput.getString()
+UserInput.printString()
+
+2) class Shape:
+    def init(self):
+        pass
+    def area(self):
+        return 0
+class Square(Shape):
+    def init(self, l):
+        self.length = l
+    def area(self):
+        a = self.length * self.length
+        return a
+s = Square(int(input()))
+print(s.area())
+
+3) class Shape: 
+    def init(self): 
+        pass 
+    def area(self): 
+        return 0 
+class Rectangle(Shape): 
+    def init(self, length, width): 
+        self.length = length 
+        self.width = width 
+    def area(self): 
+        return self.length * self.width 
+ 
+r = Rectangle(int(input()), int(input())) 
+print(r.area())
+
+4) import math 
+class Point: 
+    def init(self, x, y): 
+        self.x = x 
+        self.y = y 
+ 
+    def show(self): 
+        print(self.x, self.y) 
+ 
+    def move(self, x1, y1): 
+        self.x = x1 
+        self.y = y1 
+        return Point(self.x, self.y) 
+ 
+    def dist(self): 
+        return math.sqrt((self.x)2+(self.y)2) 
+ 
+ 
+xy = Point(int(input()), int(input())) 
+Point.show(xy) 
+ 
+distance = Point.dist(xy) 
+print(distance) 
+ 
+xy = Point.move(xy, int(input()), int(input())) 
+Point.show(xy)
+
+5) class Bank_account: 
+    def init(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+ 
+    def deposit(self): 
+        print("Please, enter the sum you want to put in deposit:") 
+        money = float(input()) 
+        self.balance += money 
+        return Bank_account(self.owner, self.balance) 
+ 
+    def withdraw(self): 
+        print("Please, enter the sum you want to take:") 
+        taken = float(input()) 
+        while taken > self.balance: 
+            print("Please, enter the sum you want to take:") 
+            taken = float(input()) 
+        self.balance -= taken 
+        return Bank_account(self.owner, self.balance) 
+ 
+    def str(self): 
+        return f"{self.owner} have {self.balance} money in his deposit." 
+
+account = Bank_account(input(), float(input())) 
+account = Bank_account.deposit(account) 
+account = Bank_account.withdraw(account) 
+print(account)
+
+6) def filter_prime(number): 
+    for i in range(2, number): 
+        if number % i == 0: 
+            return False 
+    return True 
+ 
+n = int(input()) 
+l = [] 
+for i in range(n): 
+    x = int(input()) 
+    l.append(x) 
+primes = list(filter(filter_prime, l)) 
+print(primes)
