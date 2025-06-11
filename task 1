@@ -1,0 +1,114 @@
+1111
+
+# Program to print even numbers from 2 to 20
+
+for number in range(2, 21, 2):
+    print(number)
+
+
+
+
+
+222222
+
+total = 0
+
+for number in range(1, 51):
+    if number % 3 == 0:
+        total += number
+
+print("Sum of numbers from 1 to 50 divisible by 3 is:", total)
+
+
+
+
+
+33333
+
+# Program to ask for the correct password
+
+correct_password = "admin123"
+user_input = ""
+
+while user_input != correct_password:
+    user_input = input("Enter the password: ")
+
+print("Access granted.")
+
+
+
+
+44444
+
+
+for number in range(1, 11):
+    print(f"{number} squared is {number ** 2}")
+
+
+
+55555
+
+# List of 5 words
+words = ["apple", "banana", "grape", "orange", "peach"]
+
+# Print the length of each word
+for word in words:
+    print(f"The word '{word}' has {len(word)} letters.")
+
+
+
+
+666666
+
+# Multiplication table from 1 to 5
+
+for i in range(1, 6):
+    for j in range(1, 6):
+        print(f"{i} x {j} = {i * j}")
+    print()  # Adds a blank line between tables
+
+
+
+77777
+
+
+# List of 5 numbers
+numbers = [12, 7, 25, 3, 18]
+
+# Calculate sum, maximum, and minimum
+total = sum(numbers)
+maximum = max(numbers)
+minimum = min(numbers)
+
+# Output the results
+print("Numbers:", numbers)
+print("Sum:", total)
+print("Maximum:", maximum)
+print("Minimum:", minimum)
+
+
+
+
+888888
+
+# List of strings
+words = ["apple", "banana", "cherry", "date", "elderberry"]
+
+# Replace the second element (index 1) with "updated"
+words[1] = "updated"
+
+# Display the final list
+print("Updated list:", words)
+
+
+
+
+99999
+
+# List of 5 names
+names = ["Alice", "Bob", "Andrew", "Catherine", "Amanda"]
+
+# Print names that start with "A"
+for name in names:
+    if name.startswith("A"):
+        print(name)
