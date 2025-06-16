@@ -1,0 +1,190 @@
+import datetime  # берём модуль даты и времени
+
+today = datetime.date.today()  # сегодня
+five_days = datetime.timedelta(days=5)  # 5 дней
+new_date = today - five_days  # отнимаем 5 дней
+
+print("Дата 5 дней назад:", new_date)
+
+
+
+
+
+
+import datetime
+
+today = datetime.date.today()  # сегодня
+yesterday = today - datetime.timedelta(days=1)  # вчера
+tomorrow = today + datetime.timedelta(days=1)  # завтра
+
+print("Вчера:", yesterday)
+print("Сегодня:", today)
+print("Завтра:", tomorrow)
+
+
+
+
+
+
+
+import datetime
+
+now = datetime.datetime.now()  # сейчас (дата и время)
+clean_time = now.replace(microsecond=0)  # убираем микросекунды
+
+print("Время без микросекунд:", clean_time)
+
+
+
+
+
+
+
+import datetime
+
+date1 = datetime.datetime(2024, 6, 1, 12, 0, 0)  # дата 1
+date2 = datetime.datetime(2024, 6, 2, 12, 0, 0)  # дата 2
+
+diff = date2 - date1  # находим разницу
+seconds = diff.total_seconds()  # получаем в секундах
+
+print("Разница в секундах:", seconds)
+
+
+
+
+
+
+
+
+def square_gen(n):
+    for i in range(n + 1):
+        yield i * i  # возвращаем квадрат числа
+
+# Пример использования:
+for num in square_gen(5):
+    print(num)
+
+
+
+
+
+
+
+
+def even_gen(n):
+    for i in range(n + 1):
+        if i % 2 == 0:
+            yield i
+
+# Получаем n от пользователя
+n = int(input("Введите число: "))
+evens = list(even_gen(n))
+print(",".join(map(str, evens)))  # превращаем в строку с запятыми
+
+
+
+
+
+
+
+def div_by_3_and_4(n):
+    for i in range(n + 1):
+        if i % 3 == 0 and i % 4 == 0:
+            yield i
+
+# Пример использования
+for num in div_by_3_and_4(50):
+    print(num)
+
+
+
+
+
+
+
+
+
+def squares(a, b):
+    for i in range(a, b + 1):
+        yield i * i
+
+# Тест:
+for square in squares(2, 5):
+    print(square)
+
+
+
+
+
+
+
+
+
+def countdown(n):
+    for i in range(n, -1, -1):  # идём назад
+        yield i
+
+# Тест:
+for num in countdown(5):
+    print(num)
+
+
+
+
+
+
+
+
+import math
+
+degree = 15
+radian = degree * (math.pi / 180)
+print("Радианы:", radian)
+
+
+
+
+
+
+
+height = 5
+base1 = 5
+base2 = 6
+
+area = (base1 + base2) / 2 * height
+print("Площадь трапеции:", area)
+
+
+
+
+
+
+
+
+
+import math
+
+n = 4
+s = 25
+
+area = (n * s * s) / (4 * math.tan(math.pi / n))
+print("Площадь многоугольника:", area)
+
+
+
+
+
+
+
+
+base = 5
+height = 6
+
+area = base * height
+print("Площадь параллелограмма:", area)
+
+
+
+
+
